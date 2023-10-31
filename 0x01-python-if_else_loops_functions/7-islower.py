@@ -5,5 +5,3 @@ def islower(c):
         return True
     else:
         return False
-c = 'a'
-print("{} is {}".format(c, islower(c)))
