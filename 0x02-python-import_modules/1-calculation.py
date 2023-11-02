@@ -9,6 +9,6 @@ if __name__ == '__main__':
     result_d = div(a, b)
 
     print("{:d} + {:d} = {:d}".format(a, b, result_a))
-    print("{:d} + {:d} = {:d}".format(a, b, result_s))
-    print("{:d} + {:d} = {:d}".format(a, b, result_m))
-    print("{:d} + {:d} = {:d}".format(a, b, result_d))
+    print("{:d} - {:d} = {:d}".format(a, b, result_s))
+    print("{:d} * {:d} = {:d}".format(a, b, result_m))
+    print("{:d} / {:d} = {:d}".format(a, b, result_d))
