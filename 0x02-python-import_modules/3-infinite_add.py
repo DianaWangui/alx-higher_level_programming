@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 import sys
 
+
 def add_arg(*args):
     total = sum(map(int, args))
     return total
+
 
 if __name__ == '__main__':
 
