@@ -2,12 +2,12 @@
 if __name__ = '__main__':
     import sys
 
-    arg_count = len(sys.argv) - 1  # Minus the file name argument
-    if arg_count == 0:
-        print("0 arguments.")
-    elif arg_count == 1:
-        print("{} argument:".format(arg_count))
+    count = len(sys.argv) - 1  # Minus the file name argument
+    if count == 0:
+        print("{} arguments.".format('0')
+    elif count == 1:
+        print("{} argument:".format(count))
     else:
-        print("{} arguments:".format(arg_count))
-    for i in range(arg_count):
+        print("{} arguments:".format(count))
+    for i in range(count):
         print("{}: {}".format(i + 1, sys.argv[i + 1]))
