@@ -4,7 +4,6 @@ def new_in_list(my_list, idx, element):
     idx_len = list_len - 1
     if idx < 0 or idx > idx_len:
         return my_list[:]
-    else:
-        new_list = my_list[:]
-        new_list[idx] = element
-        print(my_list)
+    new_list = my_list[:]
+    new_list[idx] = element 
+    print(my_list)
