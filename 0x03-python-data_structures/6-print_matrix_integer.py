@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     matrix_len = len(matrix)
-    col = 0
+
     for row in matrix:
-        items = len(row) - 1
+        items = len(row)
+        column = 0
         for number in row:
-            if col < items:
+            if column < items - 1
                 print("{:d}".format(number), end=" ")
             else:
                 print("{:d}".format(number), end="")
-            col += 1
+            column += 1
         print()
