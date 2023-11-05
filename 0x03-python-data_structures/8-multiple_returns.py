@@ -5,4 +5,5 @@ def multiple_returns(sentence):
     if length == 0:
         return (0, None)
     else:
-        return (length, first)
+        no_empty = (length, first)
+        return (no_empty)
