@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-ef weight_average(my_list=[]):
+def weight_average(my_list=[]):
     if not my_list:
         return 0
     number = 0
