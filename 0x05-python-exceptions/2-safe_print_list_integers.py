@@ -1,17 +1,15 @@
 #!/usr/bin/python3
 
 def safe_print_list_integers(my_list=[], x=0):
-    try:
-        nb_print = 0
-        for i in range(x):
-            if isinstance(my_list[i], int):
-                nb_print += 1
-                print("{:d}".format(my_list[i]), end="")
-    except TypeError:
-        print("This is not an int")
-    else:
-        print("")
-        return nb_print
+    total = 0
+    for i in range(x):
+        try:
+            print("{:d}".format(my_list[i]), end="")
+            total += 1
+        except (ValueError, TypeError):
+            continue
+    print("")
+    return total
 
 
 my_list = [1, 2, 3, 4, 5]
