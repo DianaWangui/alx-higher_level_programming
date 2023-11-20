@@ -4,7 +4,7 @@ def is_int(value):
     try:
         int(value)
         return True
-    except Value Error:
+    except ValueError:
         return False
 
 
@@ -16,6 +16,7 @@ def safe_print_list_integers(my_list=[], x=0):
                 continue
             print("{:d}".format(my_list[i]), end="")
             nb_print += 1
+
     except ValueError:
         pass
     finally:
