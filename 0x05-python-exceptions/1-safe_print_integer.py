@@ -4,11 +4,11 @@ def safe_print_integer(value):
         if isinstance(value, int):
             print("{}".format(value), end="")
             print()
-            return True
+        return True
         else:
             print("{}".format(value), end="")
             print()
-            return True
+        return True
     except TypeError:
         return False
 
