@@ -1,24 +1,17 @@
 #!/usr/bin/python3
 
-def is_int(value):
-    try:
-        int(value)
-        return True
-    except ValueError:
-        return False
-
-
 def safe_print_list_integers(my_list=[], x=0):
-    nb_print = 0
     try:
+        nb_print = 0
         for i in range(x):
-            if not is_int(my_list[i]):
-                continue
-            print("{:d}".format(my_list[i]), end="")
-            nb_print += 1
-    finally:
-        print()
-    return nb_print
+            if isinstance(my_list[i], int):
+                nb_print += 1
+                print("{:d}".format(my_list[i]), end="")
+    except TypeError:
+        print("This is not an int")
+    else:
+        print("")
+        return nb_print
 
 
 my_list = [1, 2, 3, 4, 5]
