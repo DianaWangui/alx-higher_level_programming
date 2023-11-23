@@ -3,17 +3,14 @@
 
 
 class Square:
-    """ initializing an isntance of a class"""
+    """
+    initializing an isntance of a class
+    raising errors incase condition fails
+    """
     def __init__(self, size=0):
         self.__size = 0
         self.__size = size
 
-    @property
-    def size(self):
-        return self.__size
-
-    @size.setter
-    def size(self, value):
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
