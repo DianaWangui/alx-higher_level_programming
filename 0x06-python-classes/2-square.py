@@ -3,7 +3,7 @@
 
 
 class Square:
-    """ initializing an isntance of a class"""   
+    """ initializing an isntance of a class"""
     def __init__(self, size=0):
         self.__size = 0
         self.__size = size
