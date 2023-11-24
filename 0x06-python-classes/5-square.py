@@ -1,23 +1,18 @@
 #!/usr/bin/python3
 
-"""
-Create class Square that defines a square by private instance attribute: size
-And a Public instance method: def area(self):
-that returns the current square area
-Methods Getter and Setter properties for size.
-property def size(self): to retrieve it
-property setter def size(self, value): to set it:
-Method my_print prints the square using "#".
-"""
+"""A module that defines a square"""
 
 
 class Square:
-    """
-    Instantiating the variables self and size.
-    raising errors if conditions are not met.
-    and print square using '#'.
-    """
+    """A class that represents a square"""
     def __init__(self, size=0):
+        """Initializing this square class
+        Args:
+            size: represents the size of the square defined
+        Raises:
+            TypeError: if size is not int
+            ValueError: if size is < 0
+        """
         self.__size = size
 
     @property
@@ -41,6 +36,7 @@ class Square:
         return (self.__size ** 2)
 
     def print(self):
+        """print the square in #"""
         if self.__size = 0:
             print()
         else:
