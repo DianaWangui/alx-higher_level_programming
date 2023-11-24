@@ -12,7 +12,7 @@ Method my_print prints the square using "#".
 
 
 class Square:
-    """ 
+    """
     Instantiating the variables self and size.
     raising errors if conditions are not met.
     and print square using '#'.
