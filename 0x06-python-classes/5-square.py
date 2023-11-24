@@ -3,9 +3,8 @@
 
 """
 class Square that defines a square
-The class takes one private instance size
-used getter to retrieve the value
-uses setter to set the value
+The class takes one private instance: self.__size
+uses getter and setter properties
 check condition of the value and raises error
 """
 
