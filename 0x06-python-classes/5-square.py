@@ -1,17 +1,11 @@
 #!/usr/bin/python3
 
 
-"""
-class Square that defines a square
-The class takes one private instance: self.__size
-uses getter and setter properties
-check condition of the value and raises error
-"""
+"""class Square that defines a square"""
 
 
 class Square:
-
-    """ instantiating private attribute size using __"""
+    """ instantiating private attribute size using"""
     def __init__(self, size=0):
         self.__size = size
 
