@@ -19,8 +19,8 @@ class Square:
             raise TypeError("Size must be an integer")
         if value < 0:
             raise ValueError("Size must be >= 0")
+
         self.__size = value
 
     def area(self):
-        area = self.__size ** 2
-        return area
+        return self.__size * self.__size
