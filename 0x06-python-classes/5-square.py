@@ -3,11 +3,11 @@
 """
 class Square that defines a square
 The class takes one private instance size
-used getter to retrieve the value 
+used getter to retrieve the value
 uses setter to set the value
 check condition of the value and raises error
-
 """
+
 
 class Square:
     """ instantiating private attribute size using __"""
@@ -31,7 +31,7 @@ class Square:
 
     # a function to find area of the square
     def area(self):
-        return (self.__size **2)
+        return (self.__size ** 2)
 
     # a function to print to stdout the square using #
     def print(self):
