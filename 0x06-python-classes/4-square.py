@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" 
+"""
 a square class that defines a square
 And a Public instance method: def area(self):
 that returns the current square area
