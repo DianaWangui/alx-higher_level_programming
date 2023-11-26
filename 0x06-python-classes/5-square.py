@@ -1,31 +1,41 @@
 #!/usr/bin/python3
 
-"""A module that defines a square"""
+"""
+A module that defines a square by private instance attributes: size
+And a Public instance method: def area(self):
+that returns the current are of a square
+Methods Getter and Setter properties for size
+property def size(self): to retrieve it
+property setter def size(self, value): to set it:
+Method my_print prints the square using "#".
+"""
 
 
 class Square:
-    """A class that represents a square"""
+    """
+    instantiating variable self and size.
+    Raising errors if conditions are not met.
+    printing using '#'
+    """
     def __init__(self, size=0):
-        """Initializing this square class
+        """Initializng private variable
         Args:
             size: represents the size of the square defined
         Raises:
-            TypeError: if size is not integer
-            ValueError: if size is < 0
+            TypeError: if `size` is not integer
+            ValueError: if `size` is < 0
         """
         self.__size = size
 
-    @property  # Property to get method
+    @property
     def size(self):
         return self.__size
 
-    @size.setter  # setter method for size
+    @size.setter
     def size(self, value):
-        # checking if value is an integer
         if isinstance(value, int):
             raise TypeError("size must be an integer")
 
-        # checking if value is >= 0
         if value < 0:
             raise ValueError("size must be >= 0")
         else:
