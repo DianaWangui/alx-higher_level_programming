@@ -19,8 +19,7 @@ method def my_print(self): prints square using '#'
 class Square:
     """initializing square, determines size, calculates area, prints"""
     def __init__(self, size=0, position=(0, 0)):
-        """
-        square instance initialization
+        """initializes instance of square
         Args:
             size: the size of square
             position: position used to indent the square
@@ -30,12 +29,12 @@ class Square:
 
     @property
     def size(self):
-        """gets the size"""
+        """gets size"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """sets the size"""
+        """sets size"""
         if not isinstance(value, int):
             raise ValueError("size must be an integer")
         elif value < 0:
@@ -49,7 +48,7 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """setting position value"""
+        """sets position"""
         if type(value) is not tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 3 positive integer")
         if not isinstance(value[0], int) or not isinstance(value[1], int):
@@ -60,7 +59,8 @@ class Square:
 
     def area(self):
         """
-        determines the area
+        This functon determines the area of a square
+
         Returns: area
         """
         return (self.__size ** 2)
