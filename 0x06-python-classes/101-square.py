@@ -23,7 +23,7 @@ class Square:
         square instance initialization
         Args:
             size: the size of square
-            position: position used to intend the square
+            position: position used to indent the square
          """
         self.__size = size
         self.__position = position
@@ -59,11 +59,14 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Finding area"""
+        """
+        determines the area
+        Returns: area
+        """
         return (self.__size ** 2)
 
     def my_print(self):
-        """printing square using symbol '#'."""
+        """printing square using symbol "#"."""
         if self.size == 0:
             print()
         for i in range(self.__Position[1]):
@@ -73,7 +76,7 @@ class Square:
 
     def __str__(self):
         """
-        prints a square offsetting it by position with symbol #
+        prints a square offsetting it by position with symbol "#"
         """
         if self.__size == 0:
             return ''
