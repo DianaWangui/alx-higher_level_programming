@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 """
 class square
@@ -77,11 +78,3 @@ class Square:
     space = ' ' * self.__position[0]
     hash = '#' * self.__size
     return new_lines + '\n'.join(space + hash for e in range(self.size))
-#   #test
-# my_square = Square(5, (0, 0))
-# print(my_square)
-
-# print("--")
-
-# my_square = Square(5, (4, 1))
-# print(my_square)
