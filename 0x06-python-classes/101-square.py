@@ -1,20 +1,23 @@
 #!/usr/bin/python3
 
 """
-class square
-private instance attribute: size
+class Square that defines a square
+Private instance attribute: size
 property def size(self): getter
 property def size(self, value): setter
-private instance attribute: position
+
+Private instance attribute: position
 property def position(self): getter
 property def position(self, value): setter
-public method: def area(self):
+
+Public method: def area(self):
 returns area of square
 method def my_print(self): prints square using '#'
 """
 
 
 class Square:
+    """initializing square, determines size, calculates area, prints"""
     def __init__(self, size=0, position=(0, 0)):
         """
         square instance initialization
