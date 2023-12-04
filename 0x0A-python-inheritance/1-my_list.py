@@ -2,7 +2,10 @@
 """Containing Mylist class """
 
 def Mylist(list):
-    """Inherits from lists and provides additional methods."""
+    """a list subclass """
+    def __init__(self):
+        """initilize the object """
+        super().__init__()
 
     def print_sorted(self):
         """printing the list in ascending order"""
