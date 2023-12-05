@@ -12,9 +12,9 @@ class BaseGeometry:
     implemented
     """
     def area(self):
+        """unimplemented area method """
         raise Exception('area() is not implemetend')
-    """ second method for validating the value passed
-    """
+
     def integer_validation(self, name, value):
         """Validate a parameter as an integer.
         Args:
