@@ -3,10 +3,7 @@
 
 
 def MyList(list):
-    """a list subclass """
-    def __init__(self):
-        """initilize the object """
-        super().__init__()
+    """public instance method for printing sorted list """
 
     def print_sorted(self):
         """printing the list in ascending order"""
