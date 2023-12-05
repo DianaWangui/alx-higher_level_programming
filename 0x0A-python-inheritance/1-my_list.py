@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""Defining an inherited list class MyList """
+"""
+A module that defines an inherited list class MyList.
+"""
 
 
 class MyList(list):
-    """Inherits from list uisng
-    Methods: print_sorted(self)
-    """
+    """Inherits from list."""
     def __init__(self):
-        """initializes the object """
+        """initializes the object"""
         super().__init__()
 
     def print_sorted(self):
-        """printing the list in ascending order"""
+        """prints the sorted list"""
         print(sorted(self))
