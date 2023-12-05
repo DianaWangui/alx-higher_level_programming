@@ -8,7 +8,7 @@ class MyList(list):
     """
     def __init__(self):
         """initializes the object """
-        super().__init__(self):
+        super().__init__()
 
     def print_sorted(self):
         """printing the list in ascending order"""
