@@ -3,7 +3,9 @@
 
 
 class MyList(list):
-    """a subclass of list"""
+    """Inherits from list uisng
+    Methods: print_sorted(self)
+    """
     def __init__(self):
         """initializes the object """
         super().__init__(self):
