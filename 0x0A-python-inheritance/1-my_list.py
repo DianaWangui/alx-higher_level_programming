@@ -2,7 +2,7 @@
 """Containing Mylist class """
 
 
-def MyList(list):
+class MyList(list):
     """public instance method for printing sorted list """
 
     def print_sorted(self):
