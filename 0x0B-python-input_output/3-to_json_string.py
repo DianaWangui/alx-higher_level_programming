@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 """a function that returns json rep of an obj string"""
+import json
 
 
 def to_json_string(my_obj):
