@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""a script that adds all args to a python list and save to file """
+"""a script that adds all args to a python list and save to file."""
 import sys
 import json
 
@@ -9,6 +9,7 @@ load_from_json_file = __import__('6-load_from_json_file')
 
 filename = "add_item.json"
 args = sys.argv
+
 
 with open(filename, "a+", encoding="utf-8") as file:
     my_list = []
