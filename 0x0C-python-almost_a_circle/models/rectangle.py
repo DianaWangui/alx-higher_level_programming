@@ -21,8 +21,7 @@ class Rectangle(Base):
         if type(height) != int:
             raise TypeError("height must be an integer")
         if height <= 0:
-            raise ValueError("heigth must be > 0")
-        self.__height = height
+            raise ValueError("height must be > 0")
 
         if type(x) != int:
             raise TypeError("x must be an integer")
