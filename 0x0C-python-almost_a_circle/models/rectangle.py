@@ -4,7 +4,6 @@
 from models.base import Base
 
 
-
 class Rectangle(Base):
     """instantiating attributes of rectangle.
     Inherits attribute of: id
@@ -42,7 +41,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """setter for height"""
-        self.height = value
+        self.__height = value
 
     # getter and setter for x
     @property
