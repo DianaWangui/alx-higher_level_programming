@@ -108,6 +108,3 @@ class Rectangle(Base):
         """Calculates and returns the area of the Rectangle instance"""
         area = self.__height * self.__width
         return area
-if __name__ == "__main__":
-    r1 = Rectangle(3, 2)
-    print(r1.area())
