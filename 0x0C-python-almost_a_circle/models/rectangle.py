@@ -112,8 +112,10 @@ class Rectangle(Base):
 
     def display(self):
         """method to display rectangle using '#' characters"""
-        for i in range(self.__height):
-            print("#" * self.__width)
+        for i in range(self.__y):
+            print()
+        for j in range(self.__height):
+            print('' * self.__x + '#' * self.__width)
 
     def __str__(self):
         """Return a string presentation of Rectangle class."""
