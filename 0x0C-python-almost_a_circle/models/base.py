@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base class with a public attribute and a class constructor."""
 import json
+import csv
 
 
 class Base:
