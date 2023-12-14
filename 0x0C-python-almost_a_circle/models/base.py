@@ -71,7 +71,7 @@ class Base:
         instance_list = []
 
         try:
-            with open(filename, 'r', encoding="utf-8") as f:
+            with open(filename, 'r') as f:
                 json_data = f.read()
                 data_list = cls.from_json_string(json_data)
                 for data in data_list:
