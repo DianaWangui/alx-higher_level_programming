@@ -125,6 +125,7 @@ class Rectangle(Base):
 
     def update(self, *args):
         """Returning a string using *args method."""
-        return ("[{:s}] ({}) {}/{} - {}/{}").format(
-                self.__class__.__name__, self.id, self.__width,
-                self.__height, self.__x, self.__y)
+        if len(args) == 5:
+            self.id, self.__width, self.__height, self.__x, self.__y = args
+        else:
+            print("Error occured.")
