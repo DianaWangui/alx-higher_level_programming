@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Base class with a public attribute and a class constructor."""
+import json
 
 
 class Base:
@@ -13,43 +14,18 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-class Rectangle(Base):
-    def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
 
-    @property
-    def width(self):
-        return self.__width
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Returns the JSON string rep of list_dictionaries.
 
-    @width.setter
-    def width(self, value):
-        self.__width = value
+        Args:
+            list_dictionaries (list): A list of dictionaries.
 
-    @property
-    def height(self):
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        self.height = value
-
-    @property
-    def x(self):
-        return self.__x
-
-    @x.setter
-    def x(self, value):
-        self.__x = value
-
-    @property
-    def y(self):
-        return self.__y
-
-    @y.setter
-    def y(self, value):
-        self.__y = value
-
+        Returns:
+            str: JSON string rep of list_dictionary.
+        """
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        else:
+            return json.dumps(list_dictionaries)
