@@ -43,7 +43,7 @@ class Base:
         with open(filename, 'w', encoding="utf-8") as file:
             file.write(cls.to_json_string(json_list))
 
-    @staticmethod
+    @classmethod
     def from_json_string(json_string):
         """Return the JSON string rep of list."""
         if json_string is None or len(json_string) == 0:
@@ -54,12 +54,12 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Create an instance using the provided dict."""
-        if cls.__name__ = 'Rectangle':
+        if cls.__name__ == 'Rectangle':
             dummy_instance = cls(1,1)
-        elif cls.__name__ = 'Square':
-            dummy_instance = cls(1)
+        elif cls.__name__ == 'Square':
+            dummy_instance == cls(1)
         else:
-            raise NotImplementedError("Unsupported class")
+            raise ValueError("Unsupported class")
 
         dummy_instance.update(**dictionary)
         return dummy_instance
