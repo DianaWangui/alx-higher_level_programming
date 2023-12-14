@@ -40,5 +40,5 @@ class Base:
         filename = "{}.json".format(cls.__name__)
 
         # Write JSON str to file
-        with opne(filename, 'w', encoding="utf-8") as file:
+        with open(filename, 'w', encoding="utf-8") as file:
             file.write(cls.to_json_string(json_list))
