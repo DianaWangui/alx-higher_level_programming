@@ -65,3 +65,13 @@ class Square(Rectangle):
                 for key, value in kwargs.items():
                     if key in keys:
                         setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Function that return dict rep of Square instance."""
+
+        return {
+                'id': seld.id,
+                'size': self.size,
+                'x': self.x,
+                'y': self.y
+            }
