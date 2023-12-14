@@ -100,9 +100,10 @@ class Base:
                 if cls.__name__ == "Square":
                     writer.writerow([x.id, x.size, x.x, x.y])
 
-      @classmethod
+    @classmethod
     def load_from_file_csv(cls):
         """Deserialize instances from a CSV file.
+
         Returns:
             list: list of instances.
         """
