@@ -1,19 +1,33 @@
 #!/usr/bin/python3
 """A class Square that inherits from class Rectangle."""
+
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """instantiating the class attribute of the square
-    inheriting some attributes from base class Reactangle
     """
+    Instantiating the class attribute of the square.
+
+    inheriting some attributes from base class Reactangle.
+    """
+
     def __init__(self, size, x=0, y=0, id=None):
+        """
+        Initialize a Square instance.
+
+        Args:
+            size (int): size of the square.
+            x (int, optional): X coordinate with default 0.
+            y (int, optional): Y coordinate with default 0.
+            id(int, optional): ID of the square with default None
+        """
         super().__init__(size, size, x, y, id)
         self.size = size
 
     @property
     def size(self):
-        """Getter for size
+        """Getter for size.
+
         Return: size
         """
         return self.width
@@ -25,16 +39,17 @@ class Square(Rectangle):
         self.height = value
 
     def __str__(self):
-        """a method to return the string"""
+        """Print out sring representation of square instance."""
         return ("[{:s}] ({}) {}/{} - {}".format(
             self.__class__.__name__, self.id, self.x, self.y, self.width))
 
     def update(self, *args, **kwargs):
-        """Assigns arguments to attributes.
+        """Assign arguments to attributes.
+
         Args:
                 *args: positional arguments
                 **kwargs: keyword arguments (attribute=value)
-                """
+        """
         if (args):
             if len(args) >= 1:
                 self.id = args[0]
@@ -45,7 +60,7 @@ class Square(Rectangle):
             if len(args) >= 4:
                 self.y = args[3]
         else:
-            keys = {'id', 'size', 'x', 'y')
+            keys = {'id', 'size', 'x', 'y'}
             if kwargs is not None:
                 for key, value in kwargs.items():
                     if key in keys:
