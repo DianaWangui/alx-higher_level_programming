@@ -28,3 +28,22 @@ class Square(Rectangle):
         """a method to return the string"""
         return ("[{:s}] ({}) {}/{} - {}".format(
             self.__class__.__name__, self.id, self.x, self.y, self.width))
+
+    def update(self, *args, **kwargs):
+        """Assigns arguments to attributes."""
+        if (args):
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.size = args[1]
+            if len(args) >= 3:
+                self.x = args[2]
+            if len(args) >= 4:
+                self.y = args[3]
+        else:
+            keys = {'id', 'size', 'x', 'y')
+            if kwargs is not None:
+                for key, value in kwargs.items():
+                    if key in keys:
+                        setattr(self, key, value)
+
