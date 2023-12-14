@@ -70,7 +70,7 @@ class Square(Rectangle):
         """Function that return dict rep of Square instance."""
 
         return {
-                'id': seld.id,
+                'id': self.id,
                 'size': self.width,
                 'x': self.x,
                 'y': self.y
