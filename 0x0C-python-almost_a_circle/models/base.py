@@ -31,21 +31,13 @@ class Base:
 
     def save_to_file(cls, list_objs):
         """Write the JSON string rep of list_objs to a file."""
-        if list_objs is None:
-            list_objs = []
+        json_list = []
+        if list_objs is not None:
+            for obj in list_objs:
+                json_list.append(cls.to_dictionary(obj))
 
-        # Get the class name
-        class_name = cls.__name__
-
-        # Generate filename
-        filename = f"{class_name}.json"
-
-        # Convert list_objs to list dict
-        list_dicts = [obj.to_dictionary() for obj in list_objs]
-
-        #Get JSON str representation
-        json_string = cls.to_json_string(list_dicts)
+        filename = "{}.json".format(cls.__name__)
 
         # Write JSON str to file
         with opne(filename, 'w', encoding="utf-8") as file:
-            file.write(json_string)
+            file.write(cls.to_json_string(json_list))
