@@ -55,9 +55,9 @@ class Base:
     def create(cls, **dictionary):
         """Create an instance using the provided dict."""
         if cls.__name__ == 'Rectangle':
-            dummy_instance = cls(1,1)
+            dummy_instance = Rectangle(1, 1)
         elif cls.__name__ == 'Square':
-            dummy_instance == cls(1)
+            dummy_instance == Square(1)
         else:
             raise ValueError("Unsupported class")
 
