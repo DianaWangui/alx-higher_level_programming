@@ -5,9 +5,15 @@ import json
 
 class Base:
     """private class attribute."""
+
     __nb_objects = 0
     """instantiating a class constructor."""
     def __init__(self, id=None):
+        """Instantiate the attributes.
+
+        Args:
+            id (int): class id.
+        """
         if id is not None:
             self.id = id
         else:
@@ -16,7 +22,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Returns the JSON string rep of list_dictionaries.
+        """Return the JSON string rep of list_dictionaries.
 
         Args:
             list_dictionaries (list): A list of dictionaries.
@@ -81,3 +87,15 @@ class Base:
             pass
 
         return instance_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serialize list of instances to a CSV file."""
+        filename = '{}.csv'.format(cls.__name__)
+        with open(filename, 'w', newline='') as my_file:
+            writer = csv.writer(my_file)
+            for x in list_objs:
+                if cls.__name__ == "Rectangle":
+                    writer.writerow([x.id, x.width, x.height, x.x, x.y])
+                if cls.__name__ == "Square":
+                    writer.writerow([x.id, x.size, x.x, x.y])
