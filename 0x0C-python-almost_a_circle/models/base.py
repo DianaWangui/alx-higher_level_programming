@@ -73,7 +73,7 @@ class Base:
         try:
             with open(filename, 'r', encoding="utf-8") as f:
                 json_data = f.read()
-                data_list = json.loads(json_data)
+                data_list = cls.from_json_string(json_data)
                 for data in data_list:
                     instance = cls.create(**data)
                     instance_list.append(instance)
