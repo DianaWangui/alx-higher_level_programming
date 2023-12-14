@@ -123,7 +123,7 @@ class Rectangle(Base):
             self.__class__.__name__, self.id, self.__x,
             self.__y, self.__width, self.__height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Returning a string using *args method."""
         if (args):
             if len(args) >= 1:
@@ -136,3 +136,9 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) >= 5:
                 self.y = args[4]
+        else:
+            allowed_keys = ['id', 'width', 'height', 'x', 'y']
+            if kwargs is not None:
+                for key, value in kwargs.items():
+                    if key in allowed_keys:
+                        setattr(self, key, value)
