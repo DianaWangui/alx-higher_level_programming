@@ -67,7 +67,7 @@ class Square:
         """
         if self.__size == 0:
             return ''
-        new_lines = '\n' * self.__position[1]
+        n_lns = '\n' * self.__position[1]
         space = ' ' * self.__position[0]
         hashes = '#' * self.__size
-        return new_lines + '\n'.join(space + hashes for e in range(self.__size))
+        return n_lns + '\n'.join(space + hashes for e in range(self.__size))
