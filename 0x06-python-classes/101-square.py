@@ -1,19 +1,6 @@
 #!/usr/bin/python3
 
-"""
-class Square that defines a square
-Private instance attribute: size
-property def size(self): getter
-property def size(self, value): setter
-
-Private instance attribute: position
-property def position(self): getter
-property def position(self, value): setter
-
-Public method: def area(self):
-returns area of square
-method def my_print(self): prints square using '#'
-"""
+"""class Square that defines a square."""
 
 
 class Square:
@@ -67,9 +54,9 @@ class Square:
 
     def my_print(self):
         """printing square using symbol "#"."""
-        if self.size == 0:
+        if self.__size == 0:
             print()
-        for i in range(self.__Position[1]):
+        for i in range(self.__position[1]):
             print('')
         for i in range(self.__size):
             print("{}{}".format(' ' * self.__position[0], '#' * self.__size))
@@ -81,5 +68,6 @@ class Square:
         if self.__size == 0:
             return ''
         new_lines = '\n' * self.__position[1]
-        space = ' ' * self.__position[0]hash = '#' * self.__size
-        return new_lines + '\n'.join(space + hash for e in range(self.size))
+        space = ' ' * self.__position[0]
+        hashes = '#' * self.__size
+        return new_lines + '\n'.join(space + hashes for e in range(self.__size))
