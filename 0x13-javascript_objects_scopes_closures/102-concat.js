@@ -4,7 +4,7 @@ const { argv } = require('process');
 const fileA = argv[2];
 const fileB = argv[3];
 const fileC = argv[4];
-async function concatTwoFiles() {
+async function concatTwoFiles () {
   try {
     const data1 = await fs.readFile(fileA);
     const data2 = await fs.readFile(fileB);
