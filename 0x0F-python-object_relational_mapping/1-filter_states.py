@@ -19,7 +19,7 @@ def list_states(username, password, database):
     #Creating a cursor in order to give the connection a good use
     cursor = db.cursor()
 
-    #executing the cursor in order to sort all states
+    #executing the cursor in order to sort all states starting with N
     cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
     states = cursor.fetchall()
 
