@@ -4,8 +4,6 @@
 
 import MySQLdb
 import sys
-
-
 def list_states(username, password, database):
     """Establish a connection to the databse server."""
     db = MySQLdb.connect(
