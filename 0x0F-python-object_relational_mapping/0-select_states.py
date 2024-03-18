@@ -30,3 +30,14 @@ def list_states(username, password, database):
     #closing the db and cursor
     cursor.close()
     db.close()
+
+if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("Usage: python script.py <mysql_username> <mysql_password> <database_name>")
+        sys.exit(1)
+
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+
+    list_states(username, password, database)
