@@ -1,23 +1,21 @@
 #!/usr/bin/python3
 
-"""
-Script that lists all states from the database.
-"""
+"""Script that lists all states from the database."""
 
 import MySQLdb
 import sys
 
 
 def list_states(username, password, database):
-    """Establishing a connection to the databse server"""
+    """Establish a connection to the databse server."""
     db = MySQLdb.connect(
         host='localhost',
-        user=mysql,
+        user=username,
         passwd=password,
         db=database,
         port=3306
         )
-        
+
     #Creating a cursor in order to give the connection a good use
     cursor = db.cursor()
 
@@ -33,7 +31,7 @@ def list_states(username, password, database):
     cursor.close()
     db.close()
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("Usage: python script.py <mysql_username> <mysql_password> <database_name>")
         sys.exit(1)
