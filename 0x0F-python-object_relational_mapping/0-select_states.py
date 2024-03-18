@@ -17,6 +17,7 @@ def list_states(username, password, database):
         db=database,
         port=3306
         )
+        
     #Creating a cursor in order to give the connection a good use
     cursor = db.cursor()
 
