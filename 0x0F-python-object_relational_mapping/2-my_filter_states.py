@@ -17,7 +17,8 @@ def list_states(username, password, database, argument1):
     )
 
     cur = db.cursor()
-    sql_query = 'SELECT * FROM states WHERE name = "{}" ORDER BY id asc'.format(argument1)
+    sql_query = 'SELECT * FROM states WHERE \
+    name = "{}" ORDER BY id asc'.format(argument1)
     cur.execute(sql_query)
 
     states = cur.fetchall()
@@ -26,6 +27,7 @@ def list_states(username, password, database, argument1):
 
     cur.close()
     db.close()
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
