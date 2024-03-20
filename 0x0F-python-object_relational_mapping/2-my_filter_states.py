@@ -17,7 +17,7 @@ def list_states(username, password, database, argument1):
     )
 
     cur = db.cursor()
-    sql_query = 'SELECT * FROM states WHERE \
+    sql_query = 'SELECT * FROM states WHERE BINARY\
     name = "{}" ORDER BY id asc'.format(argument1)
     cur.execute(sql_query)
 
