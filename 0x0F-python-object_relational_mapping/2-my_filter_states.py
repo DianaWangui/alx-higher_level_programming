@@ -14,11 +14,11 @@ def list_states(username, password, database, argument1):
         passwd=password,
         db=database,
         port=3306,
-        value = argument1
     )
 
     cur = db.cursor()
-    cur.execute('SELECT * FROM {}'.format(value))
+    sql_query = 'SELECT * FROM states WHERE name = %s ORDER BY id asc'
+    cur.execute(sql_query, (argument1,))
 
     states = cur.fetchall()
     for state in states:
@@ -28,8 +28,9 @@ def list_states(username, password, database, argument1):
     db.close()
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: python script.py")
+    if len(sys.argv) != 5:
+        print("Usage: python script.py <username> \
+        <password> <database> <argument1>")
         sys.exit(1)
     username = sys.argv[1]
     password = sys.argv[2]
