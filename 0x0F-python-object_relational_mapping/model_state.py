@@ -7,9 +7,10 @@ from sqlalchemy import (create_engine)
 
 Base = declarative_base()
 
+
 class State(Base):
     """A class to create db object."""
-    __tablename__ = 'state'
+    __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
