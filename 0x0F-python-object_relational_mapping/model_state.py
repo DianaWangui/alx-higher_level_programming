@@ -7,6 +7,7 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 class State(Base):
+    """A class to create db object."""
     __tablename__ = 'state'
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
