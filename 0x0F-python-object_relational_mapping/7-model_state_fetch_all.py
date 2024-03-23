@@ -15,7 +15,7 @@ def list_class(u_name, p_word, db_name):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).order_by(State.id).all()
+    states = session.query(State).order_by(State.id.asc()).all()
     for state in states:
         print(f"{state.id}: {state.name}")
 
