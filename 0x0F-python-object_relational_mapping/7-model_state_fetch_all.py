@@ -9,7 +9,7 @@ from model_state import Base, State
 
 
 def list_class(u_name, p_word, db_name):
-    engine = create_engine(f'mysql://{u_name}:{p_word}@localhost:3306/{db_name}')
+    engine = create_engine(f'mysql://{u_name}:{p_word}@localhost:3306/{db_name}', pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
     session = Session()
