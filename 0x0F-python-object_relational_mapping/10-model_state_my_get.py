@@ -3,8 +3,9 @@
 """
 A script that prints the State object with the name passed.
 
-argument from the database hbtn_0e_6_usa
+name: the name of state
 """
+
 
 import sys
 from sqlalchemy.orm import sessionmaker
