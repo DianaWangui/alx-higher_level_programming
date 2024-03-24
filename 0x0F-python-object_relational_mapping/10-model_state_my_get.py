@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-
-""" script that lists all State objects that contain the letter a."""
+"""
+A script that prints the State object with the name passed as
+argument from the database hbtn_0e_6_usa
+"""
 
 import sys
 from sqlalchemy.orm import sessionmaker
