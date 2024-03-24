@@ -16,7 +16,10 @@ def list_of_a(u_name, p_word, db_name):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
+    states = session.query(State)\
+        .filter(State.name.like('%a%'))\
+        .order_by(State.id)\
+        .all()
 
     if not states:
         print('Nothing')
