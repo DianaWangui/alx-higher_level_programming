@@ -20,7 +20,6 @@ def add_state(u_name, p_word, db_name):
     update_state.name = 'New Mexico'
 
     session.commit()
-    
     session.close()
 
 
