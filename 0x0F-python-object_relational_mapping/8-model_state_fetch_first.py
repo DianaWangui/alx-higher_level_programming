@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
-""" script that prints the first State object from the database hbtn_0e_6_usa."""
+""" script that prints the first State object."""
 
 import sys
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from model_state import Base, State
+
 
 def list_first_state(u_name, p_word, db_name):
     state_query = f"mysql://{u_name}:{p_word}@localhost:3306/{db_name}"
@@ -19,6 +20,7 @@ def list_first_state(u_name, p_word, db_name):
         print('Nothing\n')
 
     print(f'{first_state.id}: {first_state.name}')
+    session.close()
 
 
 if __name__ == '__main__':
