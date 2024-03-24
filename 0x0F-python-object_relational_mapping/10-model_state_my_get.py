@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""script to print the State object with name passed as argument."""
+"""A script to print the State object with name passed as argument."""
 
 import sys
 from sqlalchemy.orm import sessionmaker
