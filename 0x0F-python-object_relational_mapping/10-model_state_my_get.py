@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""A script to print the State object with name passed as argument."""
+"""a script that prints the State object."""
 
 import sys
 from sqlalchemy.orm import sessionmaker
@@ -9,6 +9,7 @@ from model_state import Base, State
 
 
 def find_state(u_name, p_word, db_name, s_name):
+    """Found method that prints the State object."""
     s_query = f"mysql://{u_name}:{p_word}@localhost:3306/{db_name}"
 
     engine = create_engine(s_query, pool_pre_ping=True)
