@@ -17,7 +17,7 @@ def list_first_state(u_name, p_word, db_name):
     session = Session()
     first_state = session.query(State).order_by(State.id).first()
     if not first_state:
-        print('Nothing\n')
+        print('Nothing')
 
     print(f'{first_state.id}: {first_state.name}')
     session.close()
