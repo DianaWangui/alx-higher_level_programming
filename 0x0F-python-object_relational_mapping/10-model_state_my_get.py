@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Start link class to table in database
-"""
+
+""" script that lists all State objects that contain the letter a."""
+
 import sys
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
