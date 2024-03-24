@@ -22,7 +22,7 @@ def list_of_a(u_name, p_word, db_name):
         .all()
 
     for state in states:
-            print(f'{state.id}: {state.name}')
+        print(f'{state.id}: {state.name}')
 
 
 if __name__ == '__main__':
