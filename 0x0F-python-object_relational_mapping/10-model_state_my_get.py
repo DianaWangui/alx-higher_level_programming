@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+
 """
-A script that prints the State object with the name passed as
+A script that prints the State object with the name passed.
+
 argument from the database hbtn_0e_6_usa
 """
 
