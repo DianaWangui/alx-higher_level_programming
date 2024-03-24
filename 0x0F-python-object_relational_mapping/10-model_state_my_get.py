@@ -1,9 +1,17 @@
 #!/usr/bin/python3
 
 """
-A script that prints the State object with the name passed.
-
-name: the name of state
+Script that prints the State object with the name passed as argument
+from the database hbtn_0e_6_usa.
+Parameters for script: mysql username, mysql password, database name
+and state name to search (SQL injection free).
+Must use the `SQLAlchemy` module.
+Must import `State` and `Base` from `model_state` -
+`from model_state import Base, State`
+Script should connect to a MySQL server runnimg on `localhost` at port `3306`
+Results must be in ascending order by `states.id`.
+If no state has the name you searched for, display Not found
+Code should not be executed when imported.
 """
 
 
