@@ -13,8 +13,6 @@ Results must be in ascending order by `states.id`.
 If no state has the name you searched for, display Not found
 Code should not be executed when imported.
 """
-
-
 import sys
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
