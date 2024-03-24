@@ -21,10 +21,7 @@ def list_of_a(u_name, p_word, db_name):
         .order_by(State.id)\
         .all()
 
-    if not states:
-        print('Nothing')
-    else:
-        for state in states:
+    for state in states:
             print(f'{state.id}: {state.name}')
 
 
