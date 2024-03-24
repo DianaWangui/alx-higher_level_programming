@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""a script that prints the State object."""
+""" script that lists all State objects that contain the letter a."""
 
 import sys
 from sqlalchemy.orm import sessionmaker
