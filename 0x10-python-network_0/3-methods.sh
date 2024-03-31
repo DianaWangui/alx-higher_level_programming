@@ -1,3 +1,3 @@
 #!/bin/bash
 #  Bash script that takes in a URL and displays all HTTP methods the server will accept.
-curl -X DELETE "$1"
+curl -X OPTIONS "$1"
