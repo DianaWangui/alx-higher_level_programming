@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # Python script that takes in a URL, sends a request to the URL
 import urllib.request
+import sys
 url = 'https://alx-intranet.hbtn.io/status'
 with urllib.request.urlopen(url) as req:
     headers = req.headers
