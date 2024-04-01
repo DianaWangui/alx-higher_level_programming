@@ -2,6 +2,7 @@
 # Python script that takes in a URL, sends a request to the URL
 import urllib.request
 import sys
+# Python script that takes in a URL, sends a request to the URL
 url = sys.argv[1]
 with urllib.request.urlopen(url) as req:
     headers = req.headers
