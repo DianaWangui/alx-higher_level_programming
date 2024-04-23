@@ -12,8 +12,8 @@ request.get(urlApi, (err, response) => {
       const characters = film.characters;
       if (characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)) {
         count++;
-        }
-      });
-      console.log(count);
+      }
+    });
+    console.log(count);
   }
 });
